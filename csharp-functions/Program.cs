@@ -38,8 +38,19 @@ Console.WriteLine("----------------------------------");
 /* BONUS 
 Modificare il programma in modo che chieda all’utente quanti numeri voglia inserire, e dopo di che questi vengono inseriti a mano dall’utente esternamente. */
 
+
+// Inserito controllo per l'inserimento del numero scelto dall'utente
+
+int numeroElementi = 0;
+
 Console.WriteLine("Indica quanti numeri vuoi inserire all'interno dell'array: ");
-int numeroElementi = int.Parse(Console.ReadLine());
+
+while (int.TryParse(Console.ReadLine(), out numeroElementi) == false)
+{
+    Console.WriteLine($"Attenzione, non hai inserito un numero corretto! Riprova: ");
+}
+
+Console.WriteLine($"Hai scelto che l'array verrà composta da {numeroElementi} elementi");
 
 // creo l'array con le dimensioni scelte dall'utente
 int[] arrayUtente = new int[numeroElementi];
@@ -50,7 +61,10 @@ for (int i = 0; i < arrayUtente.Length; i++)
     arrayUtente[i] = int.Parse(Console.ReadLine());
 }
 
+Console.Write($"L'array da te scelto è il seguente: ");
+
 StampaArray(arrayUtente);
+
 
 
 // FUNZIONI 
