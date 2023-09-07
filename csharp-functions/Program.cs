@@ -1,6 +1,40 @@
 ﻿// See https://aka.ms/new-console-template for more information
 Console.WriteLine("Hello, World!");
 
+// UTILIZZO DELLE FUNZIONI
+
+// dichiaro l'array nel codice
+
+int[] arrayNumeri = { 2, 6, 7, 5, 3, 9 };
+
+// stampo l’array di numeri creato
+
+StampaArray(arrayNumeri);
+
+Console.WriteLine("----------------------------------");
+
+// stampo l’array di numeri fornito a video, dove ogni numero è stato prima elevato al quadrato
+
+StampaArray(ElevaArrayAlQuadrato(arrayNumeri));
+
+// verifico che l’array originale non sia stato modificato quindi ristampo nuovamente l’array originale e verifico che sia rimasto [2, 6, 7, 5, 3, 9])
+
+StampaArray(arrayNumeri);
+
+Console.WriteLine("----------------------------------");
+
+// Stampo la somma di tutti i numeri
+
+Console.WriteLine($"La somma di tutti i numeri contenuti all'interno dell'array è di {SommaElementiArray(arrayNumeri)}");
+
+Console.WriteLine("----------------------------------");
+
+// Stampo la somma di tutti i numeri elevati al quadrati
+
+Console.WriteLine($"La somma di tutti i numeri contenuti all'interno dell'array elevati al quadrato è di {SommaElementiArray(ElevaArrayAlQuadrato(arrayNumeri))}");
+
+
+
 // FUNZIONI 
 
 // funzione che che preso un array di numeri interi, stampa a video il contenuto dell’array in questa forma “[elemento 1, elemento 2, elemento 3, ...]”.
@@ -45,7 +79,7 @@ int[] ElevaArrayAlQuadrato(int[] array)
 }
 
 // funzione che preso un array di numeri interi, restituisca la somma totale di tutti gli elementi dell’array.
-int sommaElementiArray(int[] array)
+int SommaElementiArray(int[] array)
 {
     int somma = 0;
 
@@ -56,3 +90,4 @@ int sommaElementiArray(int[] array)
 
     return somma;
 }
+
