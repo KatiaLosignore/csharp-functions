@@ -50,7 +50,7 @@ while (int.TryParse(Console.ReadLine(), out numeroElementi) == false)
     Console.WriteLine($"Attenzione, non hai inserito un numero corretto! Riprova: ");
 }
 
-Console.WriteLine($"Hai scelto che l'array verrà composta da {numeroElementi} elementi");
+Console.WriteLine($"Hai scelto che l'array verrà composto da {numeroElementi} elementi");
 
 // creo l'array con le dimensioni scelte dall'utente
 int[] arrayUtente = new int[numeroElementi];
