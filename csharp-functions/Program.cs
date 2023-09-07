@@ -65,6 +65,46 @@ Console.Write($"L'array da te scelto è il seguente: ");
 
 StampaArray(arrayUtente);
 
+Console.WriteLine("----------------------------------");
+
+/* BONUS EXTRA
+Definire due funzioni ricorsive:
+
+1) Una funzione che, dato un numero intero n > 0, ne calcoli il fattoriale
+2) Una funzione che, dato un numero intero n >= 0, restituisca l'n-esimo elemento della sequenza di Fibonacci.
+
+*/
+
+
+ Console.Write("Inserisci un numero intero positivo per calcolare il fattoriale: ");
+ int numeroFattoriale = int.Parse(Console.ReadLine());
+
+ int risultatoFattoriale = CalcolaFattoriale(numeroFattoriale);
+
+ Console.WriteLine($"Il fattoriale di {numeroFattoriale} è {risultatoFattoriale}");
+
+ Console.Write("Inserisci un numero intero non negativo per ottenere l'n-esimo elemento di Fibonacci: ");
+        
+ int numeroFibonacci = int.Parse(Console.ReadLine());
+
+ int risultatoFibonacci = CalcolaFibonacci(numeroFibonacci);
+
+ Console.WriteLine($"L'n-esimo elemento di Fibonacci è {risultatoFibonacci}");
+
+ static int CalcolaFattoriale(int n)
+ {
+    if (n <= 0)
+        return 1;
+    return n * CalcolaFattoriale(n - 1);   // 3 * 2 * 1
+ }
+static int CalcolaFibonacci(int n)
+{
+    if (n < 2)
+        return n;
+    return CalcolaFibonacci(n - 1) + CalcolaFibonacci(n - 2);
+}
+
+
 
 
 // FUNZIONI 
