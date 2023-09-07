@@ -33,6 +33,24 @@ Console.WriteLine("----------------------------------");
 
 Console.WriteLine($"La somma di tutti i numeri contenuti all'interno dell'array elevati al quadrato è di {SommaElementiArray(ElevaArrayAlQuadrato(arrayNumeri))}");
 
+Console.WriteLine("----------------------------------");
+
+/* BONUS 
+Modificare il programma in modo che chieda all’utente quanti numeri voglia inserire, e dopo di che questi vengono inseriti a mano dall’utente esternamente. */
+
+Console.WriteLine("Indica quanti numeri vuoi inserire all'interno dell'array: ");
+int numeroElementi = int.Parse(Console.ReadLine());
+
+// creo l'array con le dimensioni scelte dall'utente
+int[] arrayUtente = new int[numeroElementi];
+
+for (int i = 0; i < arrayUtente.Length; i++)
+{
+    Console.Write($"Inserisci il {i + 1}° numero: ");
+    arrayUtente[i] = int.Parse(Console.ReadLine());
+}
+
+StampaArray(arrayUtente);
 
 
 // FUNZIONI 
