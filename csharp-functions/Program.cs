@@ -15,7 +15,9 @@ Console.WriteLine("----------------------------------");
 
 // stampo l’array di numeri fornito a video, dove ogni numero è stato prima elevato al quadrato
 
-StampaArray(ElevaArrayAlQuadrato(arrayNumeri));
+int[] arrayAlQuadrato = ElevaArrayAlQuadrato(arrayNumeri);
+
+StampaArray(arrayAlQuadrato);
 
 // verifico che l’array originale non sia stato modificato quindi ristampo nuovamente l’array originale e verifico che sia rimasto [2, 6, 7, 5, 3, 9])
 
@@ -31,7 +33,7 @@ Console.WriteLine("----------------------------------");
 
 // Stampo la somma di tutti i numeri elevati al quadrati
 
-Console.WriteLine($"La somma di tutti i numeri contenuti all'interno dell'array elevati al quadrato è di {SommaElementiArray(ElevaArrayAlQuadrato(arrayNumeri))}");
+Console.WriteLine($"La somma di tutti i numeri contenuti all'interno dell'array elevati al quadrato è di {SommaElementiArray(arrayAlQuadrato)}");
 
 Console.WriteLine("----------------------------------");
 
